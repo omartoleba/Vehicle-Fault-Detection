@@ -65,29 +65,25 @@ This is the same fundamental design pattern used in automotive ECUs, industrial 
 
 ## 🏗 System Architecture
 
-                    ┌────────────────────────────────────────────────────┐
-                    │                   VFDLS SYSTEM                     │
-                    │                                                    │
-  ┌─────────────────┴──────────┐  UART  ┌───────────────────────────────┐│
-  │       HMI ECU              │◄──────►│        Control ECU            ││
-  │     ATmega32 #1            │        │       ATmega32 #2             ││
-  │       @ 8 MHz              │        │         @ 8 MHz               ││
-  │                            │        │                               ││
-  │  ┌──────────┐ ┌─────────┐  │        │  ┌───────────┐ ┌──────────┐   ││
-  │  │ 4×4      │ │ 4×16    │  │        │  │ HC-SR04   │ │  LM35    │   ││
-  │  │ Keypad   │ │  LCD    │  │        │  │Ultrasonic │ │ Temp     │   ││
-  │  └──────────┘ └─────────┘  │        │  └─────┬─────┘ └────┬─────┘   ││
-  │                            │        │        │ ICU         │ ADC    ││
-  │  Drivers: GPIO, UART,      │        │  ┌─────┴─────────────┴──────┐ ││
-  │           Timer, LCD,      │        │  │     ATmega32 #2 Core     │ ││
-  │           Keypad           │        │  └──┬──────────┬────────────┘ ││
-  │                            │        │     │ I2C      │ GPIO/PWM     ││
-  └────────────────────────────┘        │  ┌──┴───┐  ┌───┴────────┐     ││
-                                        │  │24C16 │  │ DC Motors  │     ││
-                                        │  │EEPROM│  │ (Windows)  │     ││
-                                        │  └──────┘  └────────────┘     ││
-                                        └───────────────────────────────┘│
-                    └─────────────────────────────────────────────────────┘
+\`\`\`mermaid
+flowchart LR
+    subgraph HMI["HMI ECU — ATmega32 #1 @ 8MHz"]
+        Keypad["4x4 Keypad"]
+        LCD["4x16 LCD"]
+        HMICore["Drivers: GPIO, UART, Timer, LCD, Keypad"]
+        Keypad --> HMICore
+        LCD --> HMICore
+    end
+
+    subgraph CTRL["Control ECU — ATmega32 #2 @ 8MHz"]
+        US["HC-SR04 Ultrasonic"] -- ICU --> CTRLCore["ATmega32 #2 Core"]
+        LM35["LM35 Temp Sensor"] -- ADC --> CTRLCore
+        CTRLCore -- I2C --> EEPROM["24C16 EEPROM"]
+        CTRLCore -- GPIO/PWM --> Motors["DC Motors (Windows)"]
+    end
+
+    HMICore <-- UART --> CTRLCore
+\`\`\`
 
 ---
 
