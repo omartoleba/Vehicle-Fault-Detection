@@ -11,6 +11,10 @@ A professional-grade dual-ECU embedded system built on two ATmega32 microcontrol
 
 ---
 
+## 📸 Demo
+
+<img width="1465" height="806" alt="image" src="https://github.com/user-attachments/assets/000121f6-d0e2-4fce-8dbb-ac2c7e8cc69b" />
+
 ## 📋 Table of Contents
 
 - [Overview](#-overview)
