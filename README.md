@@ -205,71 +205,6 @@ Vehicle-Fault-Detection-System
 └── README.md
 ```
 
----
-
-# 🛠️ Technologies Used
-
-### Programming
-
-- C
-
-### Microcontroller
-
-- ATmega32
-
-### Communication Protocols
-
-- UART
-- I²C (TWI)
-- ADC
-- ICU
-- PWM
-- GPIO
-
-### Tools
-
-- Eclipse IDE
-- AVR-GCC
-- Proteus
-- Git
-- GitHub
-
----
-
-# 🚀 Getting Started
-
-## Clone the Repository
-
-```bash
-git clone https://github.com/yourusername/Vehicle-Fault-Detection-System.git
-```
-
-## Build
-
-Compile the project using **AVR-GCC** or import it into **Eclipse IDE**.
-
-## Flash
-
-Upload each project to its corresponding ATmega32 microcontroller.
-
-## Run
-
-Power both ECUs and interact with the HMI through the keypad.
-
----
-
-# 📸 Screenshots
-
-> Add images here showing:
-
-- LCD Main Menu
-- Live Sensor Values
-- Fault Retrieval Screen
-- Hardware Setup
-- Proteus Simulation
-
----
-
 # 🎯 Learning Outcomes
 
 This project demonstrates practical experience in:
@@ -284,22 +219,6 @@ This project demonstrates practical experience in:
 - Real-Time Embedded Systems
 - Fault Detection Algorithms
 - Modular Firmware Design
-
----
-
-# 👨‍💻 Author
-
-## Omar Ahmed
-
-**Communication Engineering Student**
-
-Embedded Systems • IoT • Automotive Software • Artificial Intelligence
-
-📧 **Email:** omartoleba04@email.com
-
-💻 **GitHub:** https://github.com/omartoleba
-
-💼 **LinkedIn:** https://linkedin.com/in/omar-ahmed-959189308
 
 ---
 
