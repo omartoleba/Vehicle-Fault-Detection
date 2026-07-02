@@ -349,58 +349,6 @@ Vehicle-Fault-Detection-System
 └── README.md
 ```
 
----
-
-# 🚀 Getting Started
-
-## Clone the Repository
-
-```bash
-git clone https://github.com/YOUR_USERNAME/Vehicle-Fault-Detection-System.git
-```
-
-## Requirements
-
-- AVR-GCC
-- Eclipse IDE (or Microchip Studio)
-- Proteus 8 Professional
-- ATmega32 Development Boards
-
-## Build
-
-Compile each ECU project separately and flash the generated firmware to its corresponding ATmega32.
-
----
-
-# 🛠️ Technologies Used
-
-### Programming
-
-- C
-
-### Microcontroller
-
-- ATmega32
-
-### Communication Protocols
-
-- UART
-- I²C (TWI)
-- ADC
-- ICU
-- PWM
-- GPIO
-
-### Tools
-
-- Eclipse IDE
-- AVR-GCC
-- Proteus
-- Git
-- GitHub
-
----
-
 # 🏆 Key Achievements
 
 - Designed a complete dual-ECU embedded architecture.
