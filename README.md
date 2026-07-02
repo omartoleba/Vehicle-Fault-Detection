@@ -7,7 +7,7 @@
 ![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
 ![Platform](https://img.shields.io/badge/Platform-ATmega32-blue?style=for-the-badge)
 ![Language](https://img.shields.io/badge/Language-C-orange?style=for-the-badge)
-![Architecture](https://img.shields.io/badge/Architecture-Layered-lightgrey?style=for-the-badge)
+
 
 
 </p>
